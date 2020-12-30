@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: jdatabaseauth
-        image: masterarbeithhz/microservices:mysqlJobAuthenticationv2
+        image: JSVAR_DOCKERIMAGE
         args:
         - /bin/bash
         - -c
