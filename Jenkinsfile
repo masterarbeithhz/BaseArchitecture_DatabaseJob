@@ -3,7 +3,7 @@ pipeline {
   environment {
     registryCredential = 'dockerhub'
     imagefolder = "masterarbeithhz/microservices:"
-    imagetag = "homepage${env.BUILD_ID}"
+    imagetag = "badbjob${env.BUILD_ID}"
     giturl = 'https://github.com/masterarbeithhz/BaseArchitecture_DatabaseJob.git'
     PROJECT_ID = 'crafty-sound-297315'
     CLUSTER_NAME = 'cluster-6'
