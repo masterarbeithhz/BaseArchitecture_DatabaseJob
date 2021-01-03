@@ -1,7 +1,14 @@
+#Definition Namespace für alle Ressourcen
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: JSVAR_NAMESPACE
+---  
 apiVersion: batch/v1
 kind: Job
 metadata:
   name: jdatabaseauth
+  namespace: JSVAR_NAMESPACE
 spec:
   ttlSecondsAfterFinished: 100
   template:
@@ -12,5 +19,5 @@ spec:
         args:
         - /bin/bash
         - -c
-        - /opt/gcSession.sh mysqlauth-service root Philipp1
+        - /opt/gcSession.sh JSVAR_BA_DBNAME JSVAR_BA_DBUSER JSVAR_BA_DBPSWD
       restartPolicy: Never
